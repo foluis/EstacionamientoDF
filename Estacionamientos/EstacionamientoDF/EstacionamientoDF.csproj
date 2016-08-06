@@ -177,10 +177,29 @@
     <Compile Include="Migrations\201608061356163_initialModel.Designer.cs">
       <DependentUpon>201608061356163_initialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608061725378_CreateParkingLotTable.cs" />
+    <Compile Include="Migrations\201608061725378_CreateParkingLotTable.Designer.cs">
+      <DependentUpon>201608061725378_CreateParkingLotTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608061811227_UpdateParkingLotAdmin_IdNameToParkingLotAdminId.cs" />
+    <Compile Include="Migrations\201608061811227_UpdateParkingLotAdmin_IdNameToParkingLotAdminId.Designer.cs">
+      <DependentUpon>201608061811227_UpdateParkingLotAdmin_IdNameToParkingLotAdminId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608061837594_RemoveColumnParkingLotAdmin_IdFromTableParkingLot.cs" />
+    <Compile Include="Migrations\201608061837594_RemoveColumnParkingLotAdmin_IdFromTableParkingLot.Designer.cs">
+      <DependentUpon>201608061837594_RemoveColumnParkingLotAdmin_IdFromTableParkingLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608061845027_AddColumnParkingLotAdminIdToParkingLot.cs" />
+    <Compile Include="Migrations\201608061845027_AddColumnParkingLotAdminIdToParkingLot.Designer.cs">
+      <DependentUpon>201608061845027_AddColumnParkingLotAdminIdToParkingLot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ParkingLot.cs" />
+    <Compile Include="Models\ParkingLotArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -254,6 +273,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608061356163_initialModel.resx">
       <DependentUpon>201608061356163_initialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608061725378_CreateParkingLotTable.resx">
+      <DependentUpon>201608061725378_CreateParkingLotTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608061811227_UpdateParkingLotAdmin_IdNameToParkingLotAdminId.resx">
+      <DependentUpon>201608061811227_UpdateParkingLotAdmin_IdNameToParkingLotAdminId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608061837594_RemoveColumnParkingLotAdmin_IdFromTableParkingLot.resx">
+      <DependentUpon>201608061837594_RemoveColumnParkingLotAdmin_IdFromTableParkingLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608061845027_AddColumnParkingLotAdminIdToParkingLot.resx">
+      <DependentUpon>201608061845027_AddColumnParkingLotAdminIdToParkingLot.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
