@@ -1,0 +1,46 @@
+﻿@model IEnumerable<EstacionamientoDF.ViewModels.ParkingLotViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Parking Lots</h2>
+
+<div >
+    @Html.ActionLink("Add new", "Create")
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Name)
+        </th>      
+        <th>
+        </th>
+    </tr>
+
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="4" class="text-center">
+                No data.
+            </td>          
+        </tr>
+    }
+    else
+    {
+        foreach (var parkingLot in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => parkingLot.Name)
+                </td>   
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = parkingLot.Id }) |
+                    @Html.ActionLink("Details", "Index", "ParkingLotAreas", new { id = parkingLot.Id },null) |
+                    @Html.ActionLink("Delete", "Delete", new { id = parkingLot.Id })                    
+                </td>          
+            </tr>
+        }
+    }
+</table>

@@ -25,6 +25,23 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Add Parking Lot", "Create", "ParkingLots")</li>
+
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Parking Lots <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("All Parking Lots", "Index", "ParkingLots")</li>
+                            @*<li>
+                                <a href="#">Cuentas de mayor</a>
+                                <ul>
+                                    <li>@Html.ActionLink("Cuenta Cognos", "Index", "CuentaCognos")</li>
+                                    <li>@Html.ActionLink("Cuenta SAP", "Index", "CuentaSAP")</li>
+                                </ul>
+                            </li>*@
+                        </ul>
+                    </li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

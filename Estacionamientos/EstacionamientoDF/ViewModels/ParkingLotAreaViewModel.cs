@@ -6,12 +6,12 @@ using System.Web;
 
 namespace EstacionamientoDF.ViewModels
 {
-    public class ParkingLotViewModel
+    public class ParkingLotAreaViewModel
     {
         public int Id { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [MaxLength(200)]
         public string Name { get; set; }
 
         [Required]
@@ -19,5 +19,14 @@ namespace EstacionamientoDF.ViewModels
 
         [Required]
         public decimal Longitude { get; set; }
+
+        [Required]
+        public int Slots { get; set; }
+
+        [Required]
+        public int UsedSlots { get; set; }
+
+        [Required]
+        public int ParkingLotId { get; set; }
     }
 }
