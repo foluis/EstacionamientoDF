@@ -1,0 +1,27 @@
+﻿@model IEnumerable<NA.ParkingLot.Web.Core.Domain.Company>
+
+@{
+    ViewBag.Title = "Companies";
+}
+
+<h2>Companies</h2>
+
+<p>
+    <a asp-controller="Companies" asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>Company</th>        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+           
+        </tr>
+    }
+</table>
