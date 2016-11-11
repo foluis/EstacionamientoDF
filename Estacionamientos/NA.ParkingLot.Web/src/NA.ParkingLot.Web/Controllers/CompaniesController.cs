@@ -26,7 +26,11 @@ namespace NA.ParkingLot.Web.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var company = _unitOfWork.Companies.SingleOrDefault(c => c.Id == 1);
+            company.Name = "Cambio";
+            _unitOfWork.Complete();
+
+            return View(new Company());
         }
 
         [HttpPost]

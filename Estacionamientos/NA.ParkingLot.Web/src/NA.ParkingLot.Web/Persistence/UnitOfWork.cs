@@ -15,6 +15,7 @@ namespace NA.ParkingLot.Web.Persistence
         public UnitOfWork(ParkingLotContext context)
         {
             _context = context;
+
             Companies = new CompanyRepository(_context);
             
         }
